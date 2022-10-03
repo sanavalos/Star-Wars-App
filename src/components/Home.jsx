@@ -1,14 +1,22 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { getAllPlanets, getAllPeople } from "../redux/actions/actions.js";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  getAllPlanets,
+  getAllPeople,
+  clearState,
+} from "../redux/actions/actions.js";
 import Pagination from "./Pagination";
 
 const Home = () => {
   const dispatch = useDispatch();
+  const planets = useSelector((state) => state.planets);
 
   useEffect(() => {
     dispatch(getAllPlanets());
     dispatch(getAllPeople());
+    dispatch(clearState());
+    if (planets.length > 0)
+      localStorage.setItem("planets", JSON.stringify(planets));
   }, []);
 
   return (

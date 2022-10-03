@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -21,7 +21,7 @@ function Card({ name, diameter, climate, terrain, population, url }) {
         <span className="detailProp">Population</span>: {population}
       </p>
       {people.length > 0 ? (
-        <Link to={`/planet/${name}`} state={{ planetUrl: url }}>
+        <Link to={`/planet/${name}`}>
           <h3>See Residents</h3>
         </Link>
       ) : null}

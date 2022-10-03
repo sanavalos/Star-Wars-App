@@ -3,10 +3,13 @@ import {
   GET_PEOPLE,
   GET_RESIDENTS,
   GET_DETAILS,
+  GET_PLANET,
+  CLEAR_STATE,
 } from "../actions/actions.js";
 
 const initialState = {
   planets: [],
+  planet: {},
   people: [],
   residents: [],
   details: {},
@@ -40,6 +43,23 @@ export function reducerApp(state = initialState, action) {
       return {
         ...state,
         details: details,
+      };
+
+    case GET_PLANET:
+      let planet = state.planets.find((p) => {
+        if (p.name === action.payload) return p;
+      });
+      return {
+        ...state,
+        planet: planet,
+      };
+
+    case CLEAR_STATE:
+      return {
+        ...state,
+        planet: {},
+        residents: [],
+        details: {},
       };
     default:
       return state;

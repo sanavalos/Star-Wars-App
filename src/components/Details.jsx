@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetails } from "../redux/actions/actions.js";
+import Breadcrumbs from "./Breadcrumbs";
 
 function Details() {
   let { name } = useParams();
@@ -14,6 +15,7 @@ function Details() {
 
   return (
     <div>
+      <Breadcrumbs />
       <h1>{name}</h1>
       <p>Height: {details.height}</p>
       {details.birth_year !== "unknown" ? (

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllPlanets } from "../redux/actions/actions";
+import Breadcrumbs from "./Breadcrumbs";
 import Card from "./Card";
 
 function Pagination() {
@@ -24,7 +25,6 @@ function Pagination() {
   for (let i = 1; i <= Math.ceil(planets / 6); i++) {
     pageNumbers.push(i);
   }
-  console.log(pageNumbers);
   return (
     <>
       <ul className="paginationList">
@@ -36,6 +36,7 @@ function Pagination() {
           ))}
       </ul>
 
+      <Breadcrumbs />
       {currentPlanets.length > 0 ? (
         <div className="flexCards">
           {currentPlanets.map((p) => (

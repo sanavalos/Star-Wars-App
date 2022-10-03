@@ -4,6 +4,8 @@ export const GET_PLANETS = "GET_PLANETS";
 export const GET_PEOPLE = "GET_PEOPLE";
 export const GET_RESIDENTS = "GET_RESIDENTS";
 export const GET_DETAILS = "GET_DETAILS";
+export const GET_PLANET = "GET_PLANET";
+export const CLEAR_STATE = "CLEAR_STATE";
 
 async function apiPlanets() {
   try {
@@ -51,14 +53,26 @@ export function getAllPeople() {
   };
 }
 
-export function getResidents(planetUrl) {
+export function getResidents(name) {
   return function (dispatch) {
-    dispatch({ type: "GET_RESIDENTS", payload: planetUrl });
+    dispatch({ type: "GET_RESIDENTS", payload: name });
   };
 }
 
 export function getDetails(name) {
   return function (dispatch) {
     dispatch({ type: "GET_DETAILS", payload: name });
+  };
+}
+
+export function getPlanet(name) {
+  return function (dispatch) {
+    dispatch({ type: "GET_PLANET", payload: name });
+  };
+}
+
+export function clearState() {
+  return function (dispatch) {
+    dispatch({ type: "CLEAR_STATE" });
   };
 }

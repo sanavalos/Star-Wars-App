@@ -1,23 +1,30 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getResidents } from "../redux/actions/actions.js";
+import { getResidents, getPlanet } from "../redux/actions/actions.js";
+import Breadcrumbs from "./Breadcrumbs.jsx";
 
 function Residents() {
   let { name } = useParams();
-  let data = useLocation();
+  const planet = useSelector((state) => state.planet);
   const residents = useSelector((state) => state.residents);
-  const dispatch = useDispatch(
-    useEffect(() => {
-      dispatch(getResidents(data?.state.planetUrl));
-    }, [])
-  );
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPlanet(name));
+  }, []);
+
+  useEffect(() => {
+    dispatch(getResidents(planet?.url));
+  }, [planet]);
+
   return (
     <div>
+      <Breadcrumbs />
       <h1>PLANET {name.toUpperCase()}</h1>
       <h2>RESIDENTS</h2>
-      {residents.length > 0 ? (
+      {residents.length > 0 && planet.name ? (
         residents.map((r) => (
           <>
             <Link to={`/resident/${r.name}`}>
