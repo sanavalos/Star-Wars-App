@@ -3,6 +3,7 @@ import Home from "./components/Home.jsx";
 import { Routes, Route } from "react-router-dom";
 import Residents from "./components/Residents";
 import Details from "./components/Details";
+import Pagination from "./components/Pagination";
 
 function App() {
   return (

@@ -1,22 +1,25 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { getAllPeople } from "../redux/actions/actions.js";
+import { useSelector } from "react-redux";
 
 function Card({ name, diameter, climate, terrain, population, url }) {
-  const dispatch = useDispatch();
   const people = useSelector((state) => state.people);
-
-  useEffect(() => {
-    dispatch(getAllPeople());
-  }, [dispatch]);
 
   return (
     <div className="cardBorder">
       <h1>PLANET {name.toUpperCase()}</h1>
-      <p>Climate: {climate}</p>
-      <p>Terrain: {terrain}</p>
-      <p>Population: {population}</p>
+      <p className="cardDetail">
+        <span className="detailProp">Diameter</span>: {diameter}
+      </p>
+      <p className="cardDetail">
+        <span className="detailProp">Climate</span>: {climate}
+      </p>
+      <p className="cardDetail">
+        <span className="detailProp">Terrain</span>: {terrain}
+      </p>
+      <p className="cardDetail">
+        <span className="detailProp">Population</span>: {population}
+      </p>
       {people.length > 0 ? (
         <Link to={`/planet/${name}`} state={{ planetUrl: url }}>
           <h3>See Residents</h3>

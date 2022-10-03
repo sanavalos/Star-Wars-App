@@ -36,4 +36,20 @@ flex-wrap: wrap;
  color: rgb(204, 2, 2);
  border: rgb(204, 2, 2) solid 3px;
  width: fit-content;
-margin-left: 38%;}
+ margin-left: 38%;
+}
+
+.cardDetail{
+ text-transform: capitalize;
+}
+
+.detailProp{
+ text-decoration: underline;
+ font-weight: bold;
+}
+
+.paginationList{
+ display: flex;
+ list-style: none;
+ margin-left: 40%;
+}
