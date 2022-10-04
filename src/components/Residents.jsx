@@ -2,21 +2,31 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getResidents, getPlanet } from "../redux/actions/actions.js";
+import {
+  getResidents,
+  getPlanet,
+  getAllPlanets,
+  getAllPeople,
+} from "../redux/actions/actions.js";
 import Breadcrumbs from "./Breadcrumbs.jsx";
 
 function Residents() {
   let { name } = useParams();
+  const planets = useSelector((state) => state.planets);
+  const people = useSelector((state) => state.people);
+
   const planet = useSelector((state) => state.planet);
   const residents = useSelector((state) => state.residents);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getPlanet(name));
-  }, []);
+    dispatch(getAllPlanets());
+    dispatch(getAllPeople());
+    if (planets.length > 0) dispatch(getPlanet(name));
+  }, [dispatch, people]);
 
   useEffect(() => {
-    dispatch(getResidents(planet?.url));
+    if (people.length > 0) dispatch(getResidents(planet?.url));
   }, [planet]);
 
   return (

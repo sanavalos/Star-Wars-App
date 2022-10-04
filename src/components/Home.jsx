@@ -15,8 +15,8 @@ const Home = () => {
     dispatch(getAllPlanets());
     dispatch(getAllPeople());
     dispatch(clearState());
-    if (planets.length > 0)
-      localStorage.setItem("planets", JSON.stringify(planets));
+    // if (planets.length > 0)
+    //   localStorage.setItem("planets", JSON.stringify(planets));
   }, []);
 
   return (
