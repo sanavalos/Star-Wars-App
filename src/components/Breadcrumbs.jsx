@@ -7,11 +7,11 @@ function Breadcrumbs() {
   const details = useSelector((state) => state.details);
   return (
     <div className="pagination_list">
-      <Link to="/">
-        <p>Home</p>
-      </Link>
       {planet?.name ? (
         <>
+          <Link to="/">
+            <p>Home</p>
+          </Link>
           <Link to={`/planet/${planet.name}`}>
             <p>/ {planet.name} / </p>
           </Link>

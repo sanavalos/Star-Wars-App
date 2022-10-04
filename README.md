@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Welcome To "STAR WARS APP"
+This app is perfect Star Wars fans or people trying to get more in depth of the franchise's lore.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How does it work?
+Once you enter the app, you will see Star Wars' planets list and a search bar that will allow you to filter by planet name (search must be specific) and if your search was unsuccesfull you can clear the filter to get all the planets in screen again. <br/>
+Also you can go through various pages until you find your favorite planet.<br/>
+Once you pick and choose the planet, you can click `SEE RESIDENTS` button's card and it will take you to another section where the residents of which planet are listed. <br/>
+Already in the residents section, you can click people's name to know more about them.<br/>
+If you are done and want to go back to choose a new planet/resident, you are able to use the breadcrumbs located above the information of each section.<br/>
 
-## Available Scripts
+### Tips
+You can also redirect to a planet/resident by making the search in your browser's address bar, i.e [https://star-wars-app-sanavalos.vercel.app/planet/Alderaan](https://star-wars-app-sanavalos.vercel.app/planet/Alderaan) or [https://star-wars-app-sanavalos.vercel.app/resident/Luke%20Skywalker](https://star-wars-app-sanavalos.vercel.app/resident/Luke%20Skywalker).<br />
+Keep in mind it will take a solid minute to get all the data to display.
 
-In the project directory, you can run:
+### Technologies
+This app was coded with `JavaScript` and developed with:
+- [SW API](https://swapi.dev)
+- [React JS](https://reactjs.org)
+- [Redux](https://redux.js.org)
+- [Router](https://reactrouter.com/en/main)
+- [Sass](https://sass-lang.com)
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+_made by sanavalos_

@@ -7,7 +7,7 @@ function Card({ name, diameter, climate, terrain, population, url }) {
 
   return (
     <div className="card_cardBorder">
-      <h1>PLANET {name.toUpperCase()}</h1>
+      <h1 className="card_name">PLANET {name.toUpperCase()}</h1>
       <p className="card_cardDetail">
         <span className="card_detailProp">Diameter</span>: {diameter}
       </p>
@@ -22,7 +22,7 @@ function Card({ name, diameter, climate, terrain, population, url }) {
       </p>
       {people.length > 0 ? (
         <Link to={`/planet/${name}`}>
-          <h3>See Residents</h3>
+          <h3 className="card_residents">See Residents</h3>
         </Link>
       ) : null}
     </div>

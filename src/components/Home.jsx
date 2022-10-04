@@ -5,7 +5,7 @@ import {
   getAllPeople,
   clearState,
 } from "../redux/actions/actions.js";
-import Pagination from "./Pagination";
+import Cards from "./Cards";
 import Searchbar from "./Searchbar.jsx";
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
     <div className="home_container">
       <h1>STAR WARS</h1>
       <Searchbar />
-      <Pagination />
+      <Cards />
     </div>
   );
 };
