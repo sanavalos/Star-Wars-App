@@ -1,3 +1,19 @@
+.searchbar_container{
+ margin-left: 40vw;
+ margin-top: 12vh;
+ width: fit-content;
+  input{
+   width: 15vw;
+   height: 4vh;
+   font-size: x-large;
+  }
+  button{
+   width:5vw;
+   height: 5vh;
+   font-size: medium;
+
+  }
+}
 .searchbar_clean{
  width: 100%;
 }

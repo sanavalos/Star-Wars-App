@@ -15,7 +15,7 @@ function Searchbar() {
   };
 
   return (
-    <div>
+    <div className="searchbar_container">
       {allPlanets?.length > 0 ? (
         <>
           <input

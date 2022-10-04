@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllPlanets } from "../redux/actions/actions";
-import Breadcrumbs from "./Breadcrumbs";
 import Card from "./Card";
 import PaginationList from "./Pagination";
 
@@ -32,6 +31,7 @@ function Cards() {
         pageNumbers={pageNumbers}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
+        planets={planets}
       />
 
       {currentPlanets.length > 0 ? (
@@ -48,7 +48,7 @@ function Cards() {
           ))}
         </div>
       ) : (
-        <p>LOADING...</p>
+        <div className="cards_loading"></div>
       )}
     </div>
   );

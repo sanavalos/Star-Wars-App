@@ -18,21 +18,23 @@ function Details() {
   return (
     <div className="home_container">
       <Breadcrumbs />
-      <h1>{name}</h1>
-      {details.name ? (
-        <>
-          <p>Height: {details.height}</p>
-          {details.birth_year !== "unknown" ? (
-            <p>Birth year: {details.birth_year}</p>
-          ) : (
-            <p>We forgot the birth year!</p>
-          )}
+      <div className="card_cardBorder">
+        <h1 className="card_name">{name}</h1>
+        {details.name ? (
+          <>
+            <p>Height: {details.height}</p>
+            {details.birth_year !== "unknown" ? (
+              <p>Birth year: {details.birth_year}</p>
+            ) : (
+              <p>We forgot the birth year!</p>
+            )}
 
-          <a href={details.url} target="_blank">
-            More info
-          </a>
-        </>
-      ) : null}
+            <a href={details.url} target="_blank" className="card_name">
+              More info
+            </a>
+          </>
+        ) : null}
+      </div>
     </div>
   );
 }

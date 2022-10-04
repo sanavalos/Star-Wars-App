@@ -7,6 +7,7 @@ import {
 } from "../redux/actions/actions.js";
 import Cards from "./Cards";
 import Searchbar from "./Searchbar.jsx";
+import Navbar from "./Navbar.jsx";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -19,8 +20,8 @@ const Home = () => {
 
   return (
     <div className="home_container">
-      <h1>STAR WARS</h1>
-      <Searchbar />
+      <Navbar />
+      {/* <Searchbar /> */}
       <Cards />
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Pagination = ({ pageNumbers, setCurrentPage, currentPage }) => {
+const Pagination = ({ pageNumbers, setCurrentPage, currentPage, planets }) => {
   return (
     <div>
       <ul className="pagination_list">
@@ -18,7 +18,7 @@ const Pagination = ({ pageNumbers, setCurrentPage, currentPage }) => {
               <button onClick={() => setCurrentPage(page)}>{page}</button>
             </li>
           ))}
-        {pageNumbers.length !== currentPage && (
+        {planets.length > 0 && pageNumbers.length !== currentPage && (
           <li key="next">
             <button onClick={() => setCurrentPage(currentPage + 1)}>
               Next

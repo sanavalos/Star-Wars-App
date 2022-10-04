@@ -6,3 +6,14 @@
  align-items: center;
  justify-content: center;
  }
+
+.cards_loading{
+  position: absolute;
+  background-image: url("../../media/star\ wars\ loading.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width:30%;
+  left: 35%;
+  
+}

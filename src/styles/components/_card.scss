@@ -1,11 +1,13 @@
 .card_cardBorder {
-  border: 5px black solid;
+  border: 5px white solid;
   min-width: 350px;
   margin: 100px;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   padding: 1%;
+  backdrop-filter: blur(15px);
+  color: white;
 }
 
 .card_cardDetail {

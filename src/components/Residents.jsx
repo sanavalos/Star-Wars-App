@@ -32,19 +32,21 @@ function Residents() {
   return (
     <div className="home_container">
       <Breadcrumbs />
-      <h1>PLANET {name.toUpperCase()}</h1>
-      <h2>RESIDENTS</h2>
-      {residents.length > 0 && planet.name ? (
-        residents.map((r) => (
-          <>
-            <Link to={`/resident/${r.name}`}>
-              <p>{r.name}</p>
-            </Link>
-          </>
-        ))
-      ) : (
-        <p>No residents in this planet yet</p>
-      )}
+      <div className="card_cardBorder">
+        <h1 className="card_name">PLANET {name.toUpperCase()}</h1>
+        <h2 className="card_name">RESIDENTS</h2>
+        {residents.length > 0 && planet.name ? (
+          residents.map((r) => (
+            <>
+              <Link to={`/resident/${r.name}`}>
+                <p className="card_name">{r.name}</p>
+              </Link>
+            </>
+          ))
+        ) : (
+          <p>No residents in this planet yet</p>
+        )}
+      </div>
     </div>
   );
 }
