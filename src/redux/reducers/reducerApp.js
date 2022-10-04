@@ -16,7 +16,6 @@ const initialState = {
   people: [],
   residents: [],
   details: {},
-  filteredPlanets: [],
 };
 
 export function reducerApp(state = initialState, action) {

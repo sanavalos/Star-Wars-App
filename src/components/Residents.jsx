@@ -23,14 +23,14 @@ function Residents() {
     dispatch(getAllPlanets());
     dispatch(getAllPeople());
     if (planets.length > 0) dispatch(getPlanet(name));
-  }, [dispatch, people]);
+  }, [dispatch, people, planets]);
 
   useEffect(() => {
     if (people.length > 0) dispatch(getResidents(planet?.url));
   }, [planet]);
 
   return (
-    <div>
+    <div className="home_container">
       <Breadcrumbs />
       <h1>PLANET {name.toUpperCase()}</h1>
       <h2>RESIDENTS</h2>

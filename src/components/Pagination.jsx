@@ -27,7 +27,7 @@ function Pagination() {
   }
   return (
     <>
-      <ul className="paginationList">
+      <ul className="pagination_list">
         {pageNumbers.length > 0 &&
           pageNumbers.map((page) => (
             <li key={page}>
@@ -38,7 +38,7 @@ function Pagination() {
 
       <Breadcrumbs />
       {currentPlanets.length > 0 ? (
-        <div className="flexCards">
+        <div className="pagination_flexCards">
           {currentPlanets.map((p) => (
             <Card
               name={p.name}

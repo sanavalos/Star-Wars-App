@@ -1,0 +1,11 @@
+.pagination_flexCards{
+ display: flex;
+ flex-direction: row;
+ width: 100%;
+ flex-wrap: wrap;
+ }
+ 
+ .pagination_list{
+  display: flex;
+  list-style: none;
+  }

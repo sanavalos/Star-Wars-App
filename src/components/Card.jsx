@@ -6,19 +6,19 @@ function Card({ name, diameter, climate, terrain, population, url }) {
   const people = useSelector((state) => state.people);
 
   return (
-    <div className="cardBorder">
+    <div className="card_cardBorder">
       <h1>PLANET {name.toUpperCase()}</h1>
-      <p className="cardDetail">
-        <span className="detailProp">Diameter</span>: {diameter}
+      <p className="card_cardDetail">
+        <span className="card_detailProp">Diameter</span>: {diameter}
       </p>
-      <p className="cardDetail">
-        <span className="detailProp">Climate</span>: {climate}
+      <p className="card_cardDetail">
+        <span className="card_detailProp">Climate</span>: {climate}
       </p>
-      <p className="cardDetail">
-        <span className="detailProp">Terrain</span>: {terrain}
+      <p className="card_cardDetail">
+        <span className="card_detailProp">Terrain</span>: {terrain}
       </p>
-      <p className="cardDetail">
-        <span className="detailProp">Population</span>: {population}
+      <p className="card_cardDetail">
+        <span className="card_detailProp">Population</span>: {population}
       </p>
       {people.length > 0 ? (
         <Link to={`/planet/${name}`}>

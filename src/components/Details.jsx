@@ -9,14 +9,14 @@ function Details() {
   const dispatch = useDispatch();
   let details = useSelector((state) => state.details);
   let people = useSelector((state) => state.people);
+
   useEffect(() => {
     dispatch(getAllPeople());
-
     if (people.length > 0) dispatch(getDetails(name));
-  }, [people]);
+  }, [dispatch, people]);
 
   return (
-    <div>
+    <div className="home_container">
       <Breadcrumbs />
       <h1>{name}</h1>
       {details.name ? (
@@ -25,7 +25,7 @@ function Details() {
           {details.birth_year !== "unknown" ? (
             <p>Birth year: {details.birth_year}</p>
           ) : (
-            <p>We forgot his birth year!</p>
+            <p>We forgot the birth year!</p>
           )}
 
           <a href={details.url} target="_blank">

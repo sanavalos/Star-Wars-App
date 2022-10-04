@@ -6,7 +6,7 @@ function Breadcrumbs() {
   const planet = useSelector((state) => state.planet);
   const details = useSelector((state) => state.details);
   return (
-    <div className="paginationList">
+    <div className="pagination_list">
       <Link to="/">
         <p>Home</p>
       </Link>
