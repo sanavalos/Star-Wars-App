@@ -5,14 +5,18 @@ import {
   GET_DETAILS,
   GET_PLANET,
   CLEAR_STATE,
+  GET_FILTERED_PLANETS,
+  CLEAN_FILTER,
 } from "../actions/actions.js";
 
 const initialState = {
   planets: [],
+  allPlanets: [],
   planet: {},
   people: [],
   residents: [],
   details: {},
+  filteredPlanets: [],
 };
 
 export function reducerApp(state = initialState, action) {
@@ -21,6 +25,7 @@ export function reducerApp(state = initialState, action) {
       return {
         ...state,
         planets: action.payload,
+        allPlanets: action.payload,
       };
 
     case GET_PEOPLE:
@@ -60,6 +65,21 @@ export function reducerApp(state = initialState, action) {
         planet: {},
         residents: [],
         details: {},
+      };
+
+    case GET_FILTERED_PLANETS:
+      let newPlanets = state.planets.filter((p) =>
+        p.name.toLowerCase().startsWith(action.payload)
+      );
+      return {
+        ...state,
+        planets: newPlanets,
+      };
+
+    case CLEAN_FILTER:
+      return {
+        ...state,
+        planets: state.allPlanets,
       };
     default:
       return state;

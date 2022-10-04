@@ -6,10 +6,11 @@ import {
   clearState,
 } from "../redux/actions/actions.js";
 import Pagination from "./Pagination";
+import Searchbar from "./Searchbar.jsx";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const planets = useSelector((state) => state.planets);
+  // const planets = useSelector((state) => state.planets);
 
   useEffect(() => {
     dispatch(getAllPlanets());
@@ -22,6 +23,7 @@ const Home = () => {
   return (
     <div className="home">
       <h1>STAR WARS</h1>
+      <Searchbar />
       <Pagination />
     </div>
   );
