@@ -26,6 +26,7 @@ function Searchbar() {
                 value={search}
                 placeholder="Search planet..."
                 onChange={(e) => setSearch(e.target.value)}
+                autocomplete="off"
               ></input>
               <button
                 onClick={(e) => handleSubmit(e)}
