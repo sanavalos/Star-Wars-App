@@ -10,7 +10,7 @@ function Searchbar() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(filterPlanets(search));
+    dispatch(filterPlanets(search.toLowerCase()));
     setSearch("");
   };
 
@@ -18,17 +18,24 @@ function Searchbar() {
     <div className="searchbar_container">
       {allPlanets?.length > 0 ? (
         <>
-          <input
-            name="search"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          ></input>
-          <button onClick={(e) => handleSubmit(e)}>SEARCH</button>
+          <div className="searchbar_group">
+            <input
+              name="search"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            ></input>
+            <button
+              onClick={(e) => handleSubmit(e)}
+              className="searchbar_search"
+            >
+              SEARCH
+            </button>
+          </div>
 
           {allPlanets !== planets ? (
             <div>
               <button
-                onClick={(e) => dispatch(cleanFilter())}
+                onClick={() => dispatch(cleanFilter())}
                 className="searchbar_clean"
               >
                 CLEAN FILTER

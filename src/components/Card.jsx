@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-function Card({ name, diameter, climate, terrain, population, url }) {
+function Card({ name, diameter, climate, terrain, population }) {
   const people = useSelector((state) => state.people);
 
   return (
     <div className="card_cardBorder">
-      <h1 className="card_name">PLANET {name.toUpperCase()}</h1>
+      <h1 className="card_name">PLANET {name}</h1>
       <p className="card_cardDetail">
         <span className="card_detailProp">Diameter</span>: {diameter}
       </p>

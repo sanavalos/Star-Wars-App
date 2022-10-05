@@ -8,6 +8,7 @@ export const GET_PLANET = "GET_PLANET";
 export const CLEAR_STATE = "CLEAR_STATE";
 export const GET_FILTERED_PLANETS = "GET_FILTERED_PLANETS";
 export const CLEAN_FILTER = "CLEAN_FILTER";
+export const CLEAR_DETAILS = "CLEAR_DETAILS";
 async function apiPlanets() {
   try {
     let planets = [];
@@ -87,5 +88,11 @@ export function filterPlanets(search) {
 export function cleanFilter() {
   return function (dispatch) {
     dispatch({ type: "CLEAN_FILTER" });
+  };
+}
+
+export function clearDetails() {
+  return function (dispatch) {
+    dispatch({ type: "CLEAR_DETAILS" });
   };
 }

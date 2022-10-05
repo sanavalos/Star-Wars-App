@@ -6,7 +6,6 @@ import {
   clearState,
 } from "../redux/actions/actions.js";
 import Cards from "./Cards";
-import Searchbar from "./Searchbar.jsx";
 import Navbar from "./Navbar.jsx";
 
 const Home = () => {
@@ -16,12 +15,11 @@ const Home = () => {
     dispatch(getAllPlanets());
     dispatch(getAllPeople());
     dispatch(clearState());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="home_container">
       <Navbar />
-      {/* <Searchbar /> */}
       <Cards />
     </div>
   );

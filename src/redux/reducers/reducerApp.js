@@ -7,6 +7,7 @@ import {
   CLEAR_STATE,
   GET_FILTERED_PLANETS,
   CLEAN_FILTER,
+  CLEAR_DETAILS,
 } from "../actions/actions.js";
 
 const initialState = {
@@ -79,6 +80,12 @@ export function reducerApp(state = initialState, action) {
       return {
         ...state,
         planets: state.allPlanets,
+      };
+
+    case CLEAR_DETAILS:
+      return {
+        ...state,
+        details: {},
       };
     default:
       return state;

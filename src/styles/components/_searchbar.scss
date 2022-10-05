@@ -1,3 +1,4 @@
+
 .searchbar_container{
  margin-left: 40vw;
  margin-top: 12vh;
@@ -6,14 +7,28 @@
    width: 15vw;
    height: 4vh;
    font-size: x-large;
+   padding: 0;
+   padding: 2.5px
   }
-  button{
-   width:5vw;
-   height: 5vh;
-   font-size: medium;
 
-  }
 }
+.searchbar_group{
+ display: flex;
+ flex-direction: row;
+ justify-items: center;
+ align-items: center;
+}
+
+.searchbar_search{
+ width:5vw;
+ height: 4.5vh;
+ padding: 0;
+}
+
 .searchbar_clean{
  width: 100%;
+ font-size: medium;
+ margin-top: 1vh;
+ height: 4vh;
+
 }

@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getDetails, getAllPeople } from "../redux/actions/actions.js";
+import {
+  getDetails,
+  getAllPeople,
+  clearDetails,
+} from "../redux/actions/actions.js";
 import Breadcrumbs from "./Breadcrumbs";
 
 function Details() {
@@ -13,6 +17,9 @@ function Details() {
   useEffect(() => {
     dispatch(getAllPeople());
     if (people.length > 0) dispatch(getDetails(name));
+    return () => {
+      dispatch(clearDetails());
+    };
   }, [dispatch, people]);
 
   return (
