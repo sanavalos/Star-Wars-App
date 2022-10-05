@@ -11,17 +11,17 @@ function Breadcrumbs() {
         <h4>Home </h4>
       </Link>
       <p> &gt; </p>
-      {planet?.name ? (
-        <>
-          <Link to={`/planet/${planet.name}`}>
-            <h4>{planet.name} </h4>
-          </Link>
-          <p> &gt; </p>
-          <Link to={`/resident/${details.name}`}>
-            <h4>{details.name}</h4>
-          </Link>
-        </>
-      ) : null}
+      {planet?.name && (
+        <Link to={`/planet/${planet.name}`}>
+          <h4>{planet.name} </h4>
+        </Link>
+      )}
+      <p> &gt; </p>
+      {details?.name && (
+        <Link to={`/resident/${details.name}`}>
+          <h4>{details.name}</h4>
+        </Link>
+      )}
     </div>
   );
 }
