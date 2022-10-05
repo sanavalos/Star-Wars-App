@@ -51,7 +51,7 @@ export function reducerApp(state = initialState, action) {
       };
 
     case GET_PLANET:
-      let planet = state.planets.find((p) => {
+      let planet = state.allPlanets.find((p) => {
         if (p.name === action.payload) return p;
       });
       return {

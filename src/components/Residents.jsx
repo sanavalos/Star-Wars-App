@@ -13,7 +13,7 @@ import Navbar from "./Navbar.jsx";
 
 function Residents() {
   let { name } = useParams();
-  const planets = useSelector((state) => state.planets);
+  const planets = useSelector((state) => state.allPlanets);
   const people = useSelector((state) => state.people);
 
   const planet = useSelector((state) => state.planet);
