@@ -18,7 +18,8 @@ function Card({ name, diameter, climate, terrain, population }) {
         <span className="card_detailProp">Terrain</span>: {terrain}
       </p>
       <p className="card_cardDetail">
-        <span className="card_detailProp">Population</span>: {population}
+        <span className="card_detailProp">Population</span>: {population}{" "}
+        habitants
       </p>
       {people.length > 0 ? (
         <NavLink to={`/planet/${name}`} className="card_link">

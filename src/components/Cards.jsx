@@ -8,6 +8,7 @@ function Cards() {
   const pageNumbers = [];
   const dispatch = useDispatch();
   const planets = useSelector((state) => state.planets);
+  const allPlanets = useSelector((state) => state.allPlanets);
 
   useEffect(() => {
     dispatch(getAllPlanets());
@@ -37,20 +38,27 @@ function Cards() {
         setCurrentPage={setCurrentPage}
         planets={planets}
       />
-
-      {currentPlanets.length > 0 ? (
-        <div className="cards_flex">
-          {currentPlanets.map((p) => (
-            <Card
-              name={p.name}
-              diameter={p.diameter}
-              climate={p.climate}
-              terrain={p.terrain}
-              population={p.population}
-              url={p.url}
-            />
-          ))}
-        </div>
+      {allPlanets.length > 0 ? (
+        <>
+          {currentPlanets.length > 0 ? (
+            <div className="cards_flex">
+              {currentPlanets.map((p) => (
+                <Card
+                  name={p.name}
+                  diameter={p.diameter}
+                  climate={p.climate}
+                  terrain={p.terrain}
+                  population={p.population}
+                  url={p.url}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="card_cardBorder">
+              THE PLANET YOU ARE LOOKING DOESN'T EXIST
+            </div>
+          )}
+        </>
       ) : (
         <div className="cards_loading"></div>
       )}

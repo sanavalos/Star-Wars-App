@@ -37,11 +37,11 @@ function Details() {
             <>
               <p>
                 <span className="card_detailProp">Height</span>:{" "}
-                {details.height}
+                {details.height} cm
               </p>
               <p>
                 <span className="card_detailProp">Gender</span>:{" "}
-                {details.gender}
+                {details.gender.toUpperCase()}
               </p>
               {details.birth_year !== "unknown" ? (
                 <p>
