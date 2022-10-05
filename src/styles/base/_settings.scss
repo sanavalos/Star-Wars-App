@@ -1,7 +1,6 @@
 button{
 font-weight: bold;
 border: none;
-
  &:hover{
   cursor: pointer;
   color: #FEF442;
@@ -12,4 +11,27 @@ border: none;
 input{
  border: none;
  border-radius: 5px 0  0 5px;
+}
+
+a{
+ text-decoration: none;
+  display: flex;
+  list-style: none;
+  padding: 0px;
+  align-items: center;
+  justify-content: center;
+ h3{
+  border: 3px #FEF442 solid;
+   width:fit-content;
+   font-size: x-large;
+   border-radius: 10px;
+   margin: 5px;
+   color: black;
+   background-color: white;
+   &:hover{
+    cursor: pointer;
+    color: #FEF442;
+    background-color: black;
+   }
+ }
 }

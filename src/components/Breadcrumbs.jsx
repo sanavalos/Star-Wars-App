@@ -7,18 +7,18 @@ function Breadcrumbs() {
   const details = useSelector((state) => state.details);
   return (
     <div className="breadcrumbs_list">
+      <Link to="/">
+        <h4>Home </h4>
+      </Link>
+      <p> &gt; </p>
       {planet?.name ? (
         <>
-          <Link to="/">
-            <p>Home </p>
-          </Link>
-          /
           <Link to={`/planet/${planet.name}`}>
-            <p>{planet.name} </p>
+            <h4>{planet.name} </h4>
           </Link>
-          /
+          <p> &gt; </p>
           <Link to={`/resident/${details.name}`}>
-            <p>{details.name}</p>
+            <h4>{details.name}</h4>
           </Link>
         </>
       ) : null}

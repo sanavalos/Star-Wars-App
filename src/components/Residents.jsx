@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -9,6 +9,7 @@ import {
   getAllPeople,
 } from "../redux/actions/actions.js";
 import Breadcrumbs from "./Breadcrumbs.jsx";
+import Navbar from "./Navbar.jsx";
 
 function Residents() {
   let { name } = useParams();
@@ -31,6 +32,7 @@ function Residents() {
 
   return (
     <div className="home_container">
+      <Navbar />
       <Breadcrumbs />
       <div className="card_cardBorder">
         <h1 className="card_name">PLANET {name.toUpperCase()}</h1>
@@ -38,9 +40,9 @@ function Residents() {
         {residents.length > 0 && planet.name ? (
           residents.map((r) => (
             <>
-              <Link to={`/resident/${r.name}`}>
-                <p className="card_name">{r.name}</p>
-              </Link>
+              <NavLink to={`/resident/${r.name}`}>
+                <h3 className="card_name">{r.name}</h3>
+              </NavLink>
             </>
           ))
         ) : (

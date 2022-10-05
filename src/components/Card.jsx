@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function Card({ name, diameter, climate, terrain, population }) {
@@ -21,9 +21,9 @@ function Card({ name, diameter, climate, terrain, population }) {
         <span className="card_detailProp">Population</span>: {population}
       </p>
       {people.length > 0 ? (
-        <Link to={`/planet/${name}`}>
+        <NavLink to={`/planet/${name}`} className="card_link">
           <h3 className="card_residents">See Residents</h3>
-        </Link>
+        </NavLink>
       ) : null}
     </div>
   );

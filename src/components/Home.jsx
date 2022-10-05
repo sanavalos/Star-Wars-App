@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   getAllPlanets,
   getAllPeople,
@@ -10,7 +10,6 @@ import Navbar from "./Navbar.jsx";
 
 const Home = () => {
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(getAllPlanets());
     dispatch(getAllPeople());
