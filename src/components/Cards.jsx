@@ -13,6 +13,10 @@ function Cards() {
     dispatch(getAllPlanets());
   }, [dispatch]);
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [planets]);
+
   const [currentPage, setCurrentPage] = useState(1);
   for (let i = 1; i <= Math.ceil(planets.length / 6); i++) {
     pageNumbers.push(i);
