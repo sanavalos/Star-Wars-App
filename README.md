@@ -20,4 +20,7 @@ This app was coded with `JavaScript` and developed with:
 - [Router](https://reactrouter.com/en/main)
 - [Sass](https://sass-lang.com)
 
+### Deploy
+Vercel: https://star-wars-app-sanavalos.vercel.app
+
 _made by sanavalos_
